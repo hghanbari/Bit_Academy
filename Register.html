@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registreren </title>
+    <link rel="stylesheet" href="staylLogin.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Registreren</h1>
+<form action="engine/do_register.php" method="post" id="form" onsubmit="">
+    <div class="inputUser">
+        <label>Naam</label>
+        <input type="text" name="user" class="user" id="user" required >
+    </div>
+
+    <div class="inputEmail">
+        <label>Email</label>
+        <input type="text" name="email" class="email" id="email" onkeydown="ValidateEmail()"   required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <span id="text"></span>
+    </div>
+    <div id="klik">
+        <input type="submit" name="do-register" value="Ok">
+    </div>
+</form>
+<script src="Longin.js"></script>
+</body>
+</html>
