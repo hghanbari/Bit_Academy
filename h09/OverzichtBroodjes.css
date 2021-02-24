@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+a{
+    color: #2e7dc3;
+    font-weight: bold;
+    font-variant: full-width;
+    text-decoration: none;
+    border-right: 2px solid white;
+    padding: 4px;
+    margin-bottom: 5px;
+
+}
+img {
+    width: 100%;
+    height:200px;
+}
+h1 {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+.logo{
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}

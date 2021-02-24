@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Broodjes toevoegen</title>
+    <link rel="stylesheet" href="BroodjesToevoegen.css"
+</head>
+<body>
+<div class="logo">
+    <img src="img/broodLogo.jpg">
+    <h1>Bakkerij Vlecht Beheer</h1>
+</div>
+
+<form action="db.php" method="post" id="form" onsubmit="">
+    <a href="Overzicht%20broodjes.php">Overzicht broodjes</a>
+    <a href="BroodjesToevoegen.html">Broodjes toevoegen</a>
+    <div>
+        <label>Bestanden:</label>
+        <input type="file" name="Bestanden" multiple="multiple">
+    </div>
+    <div>
+        <label>Omschrijving:</label>
+        <input type="text" name="Omschrijving">
+    </div>
+    <div>
+        <label>Uitvoering:</label>
+        <input type="text" name="Uitvoering">
+    </div>
+    <div>
+        <label>Categorie:</label>
+        <input type="text" name="Categorie">
+    </div>
+    <div>
+        <button type="submit">submit</button>
+    </div>
+</form>
+</body>
+</html>

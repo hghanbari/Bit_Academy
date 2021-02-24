@@ -1,5 +1,5 @@
 <?php
 session_start();
-$db = mysqli_connect('localhost', 'root', '123456','bit_academy');
+$db = mysqli_connect('localhost', 'root', '0010345000','school');
 
 ?>
