@@ -10,7 +10,7 @@ body {
     color: #333;
 }
 
-a{
+a {
     color: #2e7dc3;
     font-weight: bold;
     font-variant: full-width;
@@ -28,6 +28,7 @@ h1 {
     position: absolute;
     bottom: 8px;
     left: 16px;
+    margin-left: 50px;
 }
 .logo{
     background-position: center center;
@@ -35,4 +36,28 @@ h1 {
     position: relative;
     text-align: center;
     color: white;
+}
+.form {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+h2{
+    font-size: 3em;
+    margin-bottom: 0;
+}
+p{
+    font-size:large;
+    margin-top: 0;
+}
+.list{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+td {
+    display: table-cell;
+}tr {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
 }

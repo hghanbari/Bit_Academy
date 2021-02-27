@@ -1,4 +1,5 @@
 <?php
+
 require_once '../engine/db.php';
 
 $Bestanden = $_POST["Bestanden"];
@@ -9,3 +10,4 @@ $Categorie = $_POST["Categorie"];
 $s = "INSERT INTO broodlist  (Bestanden , Omschrijving , Uitvoering , Categorie)  values ('$Bestanden', '$Omschrijving','$Uitvoering','$Categorie')";
 
 mysqli_query($db, $s);
+header('location:OverzichtBroodjes.php');
