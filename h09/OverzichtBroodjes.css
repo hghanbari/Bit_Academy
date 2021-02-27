@@ -53,11 +53,18 @@ p{
     margin-left: 50px;
     margin-right: 50px;
 }
+
+table {
+    width: 100%;
+}
+
 td {
-    display: table-cell;
-}tr {
+    border-top: 1px solid #ddd;
+    padding: 8px;
+}
+tr {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #ddd;
+
 }

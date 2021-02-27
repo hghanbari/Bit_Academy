@@ -17,19 +17,23 @@
     <p>Globale informatie van de verschillende broodjes</p>
 </div>
 <div class="list">
+    <table>
     <?php
 
     $user = "root";
     $pass = "0010345000";
 
     try {
-        $dbh = new PDO('mysql:host=localhost;dbname=school', $user, $pass);
-        foreach ($dbh->query('SELECT * FROM broodlist') as $row) { ?>
+        $db = new PDO('mysql:host=localhost;dbname=school', $user, $pass);
+        $stm = $db->query('SELECT * FROM broodlist');
+        $result = $stm->fetchAll();
+//        print_r($res);
+        foreach ($result as $row) { ?>
             <tr class="list">
-                <td><?= print_r($row[1]) ?></td>
-                <td><?= print_r($row[2]) ?></td>
-                <td><?= print_r($row[3]) ?></td>
-                <td><a href=""></a></td>
+                <td><?= $row[2] ?></td>
+                <td><?= $row[3] ?></td>
+                <td><?= $row[4] ?></td>
+                <td><a href="Details.php?id=<?= $row[0] ?>">Details</a></td>
             </tr>
         <?php
         }
@@ -39,6 +43,7 @@
         die();
     }
     ?>
+    </table>
 </div>
 </body>
 </html>

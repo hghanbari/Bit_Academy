@@ -1,4 +1,8 @@
-<?php?>
+<?php
+$id = $_GET['id'];
+$user = "root";
+$pass = "0010345000";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,21 +20,27 @@
     <a href="BroodjesToevoegen.html">Broodjes toevoegen</a>
     <h2>Details van een broodje</h2>
     <p>Alle gegevens van dit heerlijke broodje</p>
+    <a href="Update.php?id=<?= $id ?>">Edit</a>
 </div>
 <div class="list">
     <?php
 
-    $user = "root";
-    $pass = "0010345000";
 
     try {
         $dbh = new PDO('mysql:host=localhost;dbname=school', $user, $pass);
-        foreach ($dbh->query('SELECT * FROM broodlist') as $row) { ?>
-            <tr class="list">
-                <td><?= print_r($row[0]) ?></td>
-            </tr>
+        $stm = $dbh->prepare('SELECT * FROM broodlist WHERE id = ?');
+        $stm->execute([$id]);
+        $result = $stm->fetchAll()[0];
+
+        ?>
+        <p>
+            <img src="<?= $result['Bestanden'] ?>"/>
+        </p>
+        <p>
+            <?= $result['Omschrijving'] ?>
+        </p>
         <?php
-        }
+
         $dbh = null;
     } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br/>";
