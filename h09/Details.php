@@ -18,14 +18,13 @@ $pass = "0010345000";
 <div class="form">
     <a href="OverzichtBroodjes.php">Overzicht broodjes</a>
     <a href="BroodjesToevoegen.html">Broodjes toevoegen</a>
+    <a href="Update.php?id=<?= $id ?>">Edit</a>
     <h2>Details van een broodje</h2>
     <p>Alle gegevens van dit heerlijke broodje</p>
-    <a href="Update.php?id=<?= $id ?>">Edit</a>
+
 </div>
 <div class="list">
     <?php
-
-
     try {
         $dbh = new PDO('mysql:host=localhost;dbname=school', $user, $pass);
         $stm = $dbh->prepare('SELECT * FROM broodlist WHERE id = ?');
@@ -34,7 +33,10 @@ $pass = "0010345000";
 
         ?>
         <p>
-            <img src="<?= $result['Bestanden'] ?>"/>
+            <?= $result['Uitvoering'] ?>
+        </p>
+        <p>
+            <img src="<?= $result['Bestanden'] ?>" style="width: 40%"/>
         </p>
         <p>
             <?= $result['Omschrijving'] ?>

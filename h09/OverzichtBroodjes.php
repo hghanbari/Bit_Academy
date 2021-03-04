@@ -27,7 +27,6 @@
         $db = new PDO('mysql:host=localhost;dbname=school', $user, $pass);
         $stm = $db->query('SELECT * FROM broodlist');
         $result = $stm->fetchAll();
-//        print_r($res);
         foreach ($result as $row) { ?>
             <tr class="list">
                 <td><?= $row[2] ?></td>
